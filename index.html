@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>Obrigada pela visita!</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <video id="videoPlayer" autoplay playsinline>
+    <source src="https://www.youtube.com/watch?v=XPi87S4XeEM">
+    Seu navegador não suporta vídeos.
+  </video>
+  <script>
+    const video = document.getElementById('videoPlayer');
+
+    // Quando o vídeo terminar, redirecione para o Instagram
+    video.onended = () => {
+      window.location.href = "https://instagram.com/sereia_madu";
+    };
+  </script>
+</body>
+</html>
