@@ -2,35 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <title>Obrigada pela visita!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrigada pela visita</title>
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      overflow: hidden;
       background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
     video {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <video id="videoPlayer" autoplay playsinline>
+  <video id="video" autoplay muted playsinline>
     <source src="teste.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos.
+    Seu navegador não suporta vídeos HTML5.
   </video>
-  <script>
-    const video = document.getElementById('videoPlayer');
 
-    // Quando o vídeo terminar, redirecione para o Instagram
+  <script>
+    const video = document.getElementById('video');
     video.onended = () => {
-      window.location.href = "https://instagram.com/sereia_madu";
+      // Redireciona para o Instagram após o vídeo
+      window.location.href = 'https://www.instagram.com/sereia_madu';
     };
   </script>
 </body>
